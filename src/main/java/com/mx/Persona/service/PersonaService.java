@@ -22,4 +22,8 @@ public class PersonaService {
 	public List<Persona> listar(){
 		return dao.findAll(Sort.by(Sort.Direction.ASC, "id"));
 	}
+	
+	public Persona buscar(int id) {
+		return dao.findById(id).orElse(null);
+	}
 }
