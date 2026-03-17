@@ -26,4 +26,8 @@ public class PersonaService {
 	public Persona buscar(int id) {
 		return dao.findById(id).orElse(null);
 	}
+	
+	public Persona editar(Persona p) {
+		return dao.save(p);
+	}
 }
