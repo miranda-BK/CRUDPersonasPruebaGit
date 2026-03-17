@@ -29,5 +29,11 @@ public class PersonaService {
 	
 	public void eliminar(int id) {
 		dao.deleteById(id);
+
+	}
+	
+	public Persona editar(Persona p) {
+		return dao.save(p);
+
 	}
 }
