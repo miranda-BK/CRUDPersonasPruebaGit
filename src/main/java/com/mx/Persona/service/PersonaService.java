@@ -26,4 +26,8 @@ public class PersonaService {
 	public Persona buscar(int id) {
 		return dao.findById(id).orElse(null);
 	}
+	
+	public void eliminar(int id) {
+		dao.deleteById(id);
+	}
 }
